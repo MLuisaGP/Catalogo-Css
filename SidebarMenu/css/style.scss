@@ -16,7 +16,6 @@ body{
     &:hover{
         width: 25vh;
         a{
-            border-radius: 5px;
             border-bottom: 1px solid #ffffff67;
         }
     }
@@ -30,10 +29,9 @@ body{
         display: flex;
         color:#fff;
         gap: 3rem;
-       
+        border-radius: 5px;
         padding: 1rem 0.3rem;
         transition: 300ms;
-        border-radius: 5px 5px 0 0 ;
         &:hover{
             background-color: #ffffff2d;
         }
