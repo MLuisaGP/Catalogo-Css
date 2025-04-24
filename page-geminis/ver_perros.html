@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perros en Adopción - Adopta un Amigo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Adopta un Amigo Fiel</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Inicio</a></li>
+                    <li><a href="ver_perros.html" class="active">Ver Perros</a></li>
+                    <li><a href="#">Ver Gatos</a></li>
+                    <li><a href="proceso_adopcion.html">Proceso Adopción</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title">
+             <div class="container">
+                <h2>Perros Esperando un Hogar</h2>
+                <p>Estos maravillosos perros están buscando una familia para siempre.</p>
+            </div>
+        </section>
+
+        <section class="filters">
+             <div class="container">
+                <h3>Filtrar por:</h3>
+                <form action="#" method="get" class="filter-form">
+                     {/* Nota: Estos filtros son solo visuales en este ejemplo estático */}
+                    <div class="filter-group">
+                        <label for="size">Tamaño:</label>
+                        <select name="size" id="size">
+                            <option value="">Todos</option>
+                            <option value="small">Pequeño</option>
+                            <option value="medium">Mediano</option>
+                            <option value="large">Grande</option>
+                        </select>
+                    </div>
+                     <div class="filter-group">
+                        <label for="age">Edad:</label>
+                        <select name="age" id="age">
+                            <option value="">Todas</option>
+                            <option value="puppy">Cachorro</option>
+                            <option value="young">Joven</option>
+                            <option value="adult">Adulto</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="gender">Sexo:</label>
+                        <select name="gender" id="gender">
+                            <option value="">Ambos</option>
+                            <option value="male">Macho</option>
+                            <option value="female">Hembra</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-secondary filter-btn">Aplicar Filtros</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="pets-gallery">
+            <div class="container">
+                <div class="pets-grid">
+                    {/* Perro 1 */}
+                    <div class="pet-card">
+                        <img src="https://via.placeholder.com/300x250/cccccc/ffffff?text=Foto+Perro+3" alt="Foto de Buddy">
+                        <div class="pet-info">
+                            <h3>Buddy</h3>
+                            <p>Macho, Adulto, Grande</p>
+                            <span class="tag tag-new">Nuevo</span>
+                            <a href="#" class="btn btn-secondary">Conócelo</a>
+                        </div>
+                    </div>
+
+                    {/* Perro 2 */}
+                    <div class="pet-card">
+                        <img src="https://via.placeholder.com/300x250/cccccc/ffffff?text=Foto+Perro+4" alt="Foto de Daisy">
+                         <div class="pet-info">
+                            <h3>Daisy</h3>
+                            <p>Hembra, Cachorra, Mediana</p>
+                            <a href="#" class="btn btn-secondary">Conócela</a>
+                        </div>
+                    </div>
+
+                     {/* Perro 3 */}
+                    <div class="pet-card">
+                        <img src="https://via.placeholder.com/300x250/cccccc/ffffff?text=Foto+Perro+5" alt="Foto de Cooper">
+                         <div class="pet-info">
+                            <h3>Cooper</h3>
+                            <p>Macho, Joven, Pequeño</p>
+                            <span class="tag tag-urgent">Urgente</span>
+                            <a href="#" class="btn btn-secondary">Conócelo</a>
+                        </div>
+                    </div>
+
+                     {/* Perro 4 */}
+                    <div class="pet-card">
+                        <img src="https://via.placeholder.com/300x250/cccccc/ffffff?text=Foto+Perro+6" alt="Foto de Lola">
+                         <div class="pet-info">
+                            <h3>Lola</h3>
+                            <p>Hembra, Senior, Mediana</p>
+                            <span class="tag" style="background-color: #add8e6;">Necesita Hogar Tranquilo</span> {/* Ejemplo etiqueta personalizada */}
+                            <a href="#" class="btn btn-secondary">Conócela</a>
+                        </div>
+                    </div>
+
+                     {/* Añade más tarjetas de perros aquí */}
+
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Adopta un Amigo Fiel. Todos los derechos reservados.</p>
+            <p>Síguenos en redes sociales</p>
+        </div>
+    </footer>
+
+</body>
+</html>

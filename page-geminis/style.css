@@ -296,3 +296,337 @@ footer p {
         width: 80%;
     }
 }
+/* --- Estilos para Páginas de Contenido General y Títulos --- */
+.page-title {
+    background-color: var(--primary-color); /* Fondo verde para títulos de página */
+    color: var(--light-text-color);
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.3em;
+}
+
+.content-page { /* Contenedor para páginas como Proceso Adopción */
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.content-page h3 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color); /* Línea debajo de subtítulos */
+    padding-bottom: 5px;
+    display: inline-block; /* Para que el borde solo ocupe el texto */
+}
+
+/* --- Estilos para Filtros (perros.html) --- */
+.filters {
+    background-color: var(--card-background);
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filters h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap; /* Para que se ajusten en pantallas pequeñas */
+    justify-content: center; /* Centrar los grupos */
+    gap: 20px; /* Espacio entre grupos */
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre label y select */
+}
+
+.filter-group label {
+    font-weight: bold;
+}
+
+.filter-group select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-width: 150px; /* Ancho mínimo para los select */
+}
+
+.filter-btn {
+    padding: 8px 20px; /* Ajustar padding si es necesario */
+}
+
+
+/* --- Estilos para la Galería (perros.html y futuros gatos.html) --- */
+.pets-gallery {
+    padding: 30px 0; /* Añadir padding si es necesario */
+}
+
+/* Los estilos .pets-grid y .pet-card ya deberían existir del index.html */
+
+/* --- Estilos para Proceso de Adopción (proceso_adopcion.html) --- */
+.steps-list {
+    list-style: none; /* Quitar números por defecto */
+    counter-reset: steps-counter; /* Iniciar contador */
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.steps-list li {
+    counter-increment: steps-counter; /* Incrementar contador */
+    margin-bottom: 20px;
+    padding-left: 50px; /* Espacio para el número */
+    position: relative; /* Para posicionar el número */
+    border-left: 3px solid var(--accent-color); /* Línea amarilla a la izquierda */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.steps-list li::before {
+    content: counter(steps-counter); /* Mostrar el número del contador */
+    position: absolute;
+    left: -15px; /* Posicionar el número */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color); /* Círculo verde */
+    color: var(--light-text-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.steps-list li strong {
+    color: var(--primary-color);
+    display: block; /* Que el título ocupe una línea */
+    margin-bottom: 5px;
+}
+
+.requirements-list {
+    list-style: disc; /* Viñetas normales */
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.requirements-list li {
+    margin-bottom: 8px;
+}
+
+.adoption-cta {
+    background-color: var(--background-color); /* Fondo gris claro */
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.adoption-cta h3 {
+    border-bottom: none; /* Quitar borde del h3 genérico */
+    display: block; /* Que ocupe todo el ancho */
+    color: var(--primary-color);
+}
+
+.adoption-cta .btn {
+    margin-top: 15px;
+}
+
+/* Asegurarse que el enlace activo en la navegación se vea bien */
+/* (La regla .active ya existe, pero la ponemos aquí para confirmar) */
+header nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    font-weight: bold;
+}
+/* --- Estilos para la Página de Perfil del Animal --- */
+.pet-profile {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.profile-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 2.8em;
+}
+
+.profile-tag { /* Estilo específico para tags en el perfil si es necesario */
+    font-size: 1em;
+    padding: 5px 15px;
+    margin-left: 10px; /* Espacio si hay varios tags */
+}
+
+/* Layout de 2 columnas para el perfil */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Columna izquierda más pequeña para fotos */
+    gap: 40px; /* Espacio entre columnas */
+}
+
+/* Estilos Columna Izquierda: Galería de Fotos */
+.profile-gallery .main-photo img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+}
+
+.thumbnail-photos {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Para que se ajusten si hay muchas */
+}
+
+.thumbnail-photos img {
+    width: 100px; /* Ancho fijo para thumbnails */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    cursor: pointer; /* Indica que son clickables (aunque no tengan JS aquí) */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thumbnail-photos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Estilos Columna Derecha: Detalles */
+.profile-details h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.profile-details .quick-info {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 15px;
+}
+
+.profile-details h3 {
+    color: var(--primary-color);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.profile-details p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* Lista de Características */
+.characteristics-list {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #fdfdfd; /* Fondo muy sutil */
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.characteristics-list dt { /* Término (ej: Nivel de Energía) */
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 3px;
+     float: left; /* Que el término y la definición estén en línea */
+     width: 40%; /* Ancho para el término */
+     clear: left; /* Asegurar que cada par empiece en nueva línea */
+     padding-right: 10px; /* Espacio entre término y definición */
+}
+
+.characteristics-list dd { /* Definición (ej: Alto) */
+    margin-left: 42%; /* Dejar espacio para el dt */
+    margin-bottom: 10px;
+    color: #444;
+}
+.characteristics-list dd:last-child {
+     margin-bottom: 0; /* Quitar margen inferior del último elemento */
+}
+
+
+/* Botones de Llamada a la Acción del Perfil */
+.profile-cta {
+    margin-top: 30px;
+    text-align: center; /* Centrar botones */
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.profile-cta .btn {
+    margin: 10px; /* Espacio alrededor de los botones */
+}
+
+.btn-large { /* Hacer botón principal más grande */
+    padding: 12px 30px;
+    font-size: 1.2em;
+}
+
+/* --- Media Queries para Responsividad del Perfil --- */
+@media (max-width: 900px) {
+    .profile-layout {
+        grid-template-columns: 1fr; /* Apilar columnas en pantallas medianas/pequeñas */
+    }
+     .profile-gallery {
+        margin-bottom: 30px; /* Espacio debajo de la galería cuando se apila */
+    }
+    .characteristics-list dt,
+    .characteristics-list dd {
+        float: none;
+        width: auto;
+        margin-left: 0;
+    }
+     .characteristics-list dt {
+         margin-bottom: 5px; /* Más espacio cuando están apilados */
+     }
+     .characteristics-list dd {
+        margin-bottom: 15px; /* Más espacio entre definiciones */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header h1 {
+        font-size: 2.2em;
+    }
+    .thumbnail-photos {
+        justify-content: center; /* Centrar thumbnails */
+    }
+    .profile-cta .btn {
+        display: block; /* Botones uno debajo del otro */
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     .btn-large {
+        font-size: 1.1em;
+        padding: 10px 25px;
+    }
+}
