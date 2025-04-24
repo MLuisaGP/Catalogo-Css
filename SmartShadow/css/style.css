@@ -1,0 +1,33 @@
+
+article{
+    position: relative;
+    width: 50vh;
+    height: 60vh;
+    border-radius: 5px;
+    background: url(../img/bg.jpg) no-repeat center center / cover;
+    margin: 2rem auto;
+}
+article::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    /*Shortcut de top:0; rigth:0; bottom:0; left:0;*/
+    inset: 0;
+    position: absolute;
+    background: inherit;
+    filter: blur(10px) saturate(400%);
+    z-index: -1;
+    /* animation: shadowAnimation 3s ease infinite; */
+}
+
+@keyframes shadowAnimation {
+    0% {
+        filter: blur(10px) saturate(400%);
+    }
+    50% {
+        filter: blur(40px) saturate(400%);
+    }
+    100% {
+        filter: blur(10px) saturate(400%);
+    }
+  }
