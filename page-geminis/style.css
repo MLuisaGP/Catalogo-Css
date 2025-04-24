@@ -1,0 +1,298 @@
+
+/* --- Variables de Color --- */
+:root {
+    --primary-color: #28a745; /* Verde principal (botones, enlaces activos) */
+    --secondary-color: #4CAF50; /* Verde secundario o alternativo */
+    --accent-color: #ffc107; /* Amarillo (etiquetas 'Nuevo', destaques sutiles) */
+    --urgent-color: #dc3545; /* Rojo (¡Usar con moderación! Para etiquetas 'Urgente') */
+    --background-color: #f8f9fa; /* Fondo general (gris muy claro) */
+    --card-background: #ffffff; /* Fondo de las tarjetas (blanco) */
+    --text-color: #333333; /* Color de texto principal */
+    --light-text-color: #ffffff; /* Texto sobre fondos oscuros/verdes */
+    --border-color: #dee2e6; /* Bordes sutiles */
+    --font-family: 'Nunito', sans-serif; /* Fuente agradable */
+}
+
+/* --- Reseteo Básico y Estilos Generales --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.8em;
+}
+
+/* --- Header y Navegación --- */
+header {
+    background-color: var(--card-background);
+    padding: 1em 0;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0; /* Ajustar margen para h1 en header */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* --- Sección Hero --- */
+.hero {
+    background: linear-gradient(rgba(40, 167, 69, 0.1), rgba(255, 255, 255, 0.1)), url('https://via.placeholder.com/1200x400/e8f5e9/81c784?text=Imagen+Fondo+Opcional') no-repeat center center/cover; /* Fondo verde muy suave o imagen */
+    color: var(--text-color); /* Texto oscuro si el fondo es claro */
+    padding: 60px 0;
+    text-align: center;
+    /* Si usas fondo oscuro/foto: color: var(--light-text-color); */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.cta-buttons .btn {
+    margin: 0 10px;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color); /* Verde secundario */
+    color: var(--light-text-color);
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.btn-tertiary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* --- Sección Featured Pets --- */
+.featured-pets {
+    padding: 40px 0;
+}
+
+.featured-pets h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+
+.pet-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Para contener la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 250px; /* Altura fija para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+.pet-info {
+    padding: 20px;
+}
+
+.pet-info h3 {
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.pet-info p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.pet-info .btn {
+    display: block; /* Hace que el botón ocupe todo el ancho */
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* --- Etiquetas (Tags) --- */
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--text-color); /* Texto oscuro por defecto */
+    margin-right: 5px; /* Espacio entre etiquetas si hay varias */
+    margin-bottom: 10px; /* Espacio debajo de la etiqueta */
+}
+
+.tag-new {
+    background-color: var(--accent-color); /* Amarillo */
+}
+
+.tag-urgent {
+    background-color: var(--urgent-color); /* Rojo */
+    color: var(--light-text-color); /* Texto blanco sobre rojo */
+}
+
+/* --- Sección How to Help --- */
+.how-to-help {
+    background-color: var(--secondary-color); /* Fondo verde más suave */
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.how-to-help h2 {
+    color: var(--light-text-color); /* Asegurar contraste */
+}
+.how-to-help .btn-tertiary {
+    background-color: var(--light-text-color); /* Botón blanco sobre fondo verde */
+    color: var(--secondary-color);
+    border: none;
+}
+.how-to-help .btn-tertiary:hover {
+     background-color: var(--accent-color); /* Amarillo al pasar el mouse */
+     color: var(--text-color);
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* --- Media Queries para Responsividad (Ejemplo Básico) --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .cta-buttons .btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}
